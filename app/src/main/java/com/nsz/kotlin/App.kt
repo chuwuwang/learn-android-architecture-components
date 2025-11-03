@@ -6,6 +6,7 @@ import android.content.Context
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.facebook.stetho.Stetho
 import com.nsz.kotlin.aac.architecture.lifecycle.LifecycleCallback
+import com.nsz.kotlin.performance.monitor.CrashHandler
 import io.realm.Realm
 import io.realm.RealmConfiguration
 
@@ -17,15 +18,16 @@ class App : Application() {
         const val TAG = "strawberry"
 
         lateinit var instance: App
-
         lateinit var context: Context
-
+        lateinit var crashHandler: CrashHandler
     }
 
     override fun onCreate() {
         super.onCreate()
         instance = this
         context = applicationContext
+
+        initializeCrashHandler()
 
         val appStatusObserver = AppStatusObserver()
         ProcessLifecycleOwner.get().lifecycle.addObserver(appStatusObserver)
@@ -41,6 +43,11 @@ class App : Application() {
         Realm.setDefaultConfiguration(realmConfiguration)
 
         Stetho.initializeWithDefaults(this)
+    }
+
+    private fun initializeCrashHandler() {
+        crashHandler = CrashHandler(application = this)
+        Thread.setDefaultUncaughtExceptionHandler(crashHandler)
     }
 
 }
