@@ -1,4 +1,4 @@
-package com.nsz.kotlin.thread;
+package com.nsz.kotlin.advanced.coroutines;
 
 import java.util.LinkedList;
 

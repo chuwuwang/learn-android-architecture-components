@@ -1,6 +1,11 @@
-package com.nsz.kotlin.thread
+package com.nsz.kotlin.advanced.coroutines
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 fun firstDemo1() {
     val scope = CoroutineScope(Dispatchers.Default)

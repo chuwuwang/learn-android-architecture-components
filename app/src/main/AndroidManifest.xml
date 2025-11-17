@@ -121,8 +121,8 @@
         <activity android:name=".advanced.storage.StorageActivity" />
         <activity android:name=".advanced.storage.ScopedStorageActivity" />
 
-        <!-- Thread -->
-        <activity android:name=".thread.LaunchScopeActivity" />
+        <!-- Coroutines -->
+        <activity android:name=".advanced.coroutines.LaunchScopeActivity" />
         <!--/////////////////////////////////////////////////////////////////////////////////////-->
         <!--/////////////////////////////////////////////////////////////////////////////////////-->
 

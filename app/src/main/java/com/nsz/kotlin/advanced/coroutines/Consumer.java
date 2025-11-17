@@ -1,31 +1,29 @@
-package com.nsz.kotlin.thread;
+package com.nsz.kotlin.advanced.coroutines;
 
 import java.util.LinkedList;
 
-public class Producer extends Thread {
+public class Consumer extends Thread {
 
     private LinkedList<Integer> sharedList;
 
-    public Producer(LinkedList<Integer> queue) {
+    public Consumer(LinkedList<Integer> queue) {
         sharedList = queue;
     }
 
     @Override
     public void run() {
-        int count = 0;
-        for (int i = 0; i < 20; i++) {
+        while (true) {
             synchronized (sharedList) {
-                if (sharedList.size() >= 5) {
-                    System.out.println("产能过剩");
+                if (sharedList.size() == 0) {
+                    System.out.println("没有东西可以消费了");
                     try {
                         sharedList.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 } else {
-                    count++;
-                    sharedList.add(count);
-                    System.out.println("生产产品: " + count);
+                    Integer ps = sharedList.poll();
+                    System.out.println("消费产品: " + ps);
                     sharedList.notify();
                 }
             }
