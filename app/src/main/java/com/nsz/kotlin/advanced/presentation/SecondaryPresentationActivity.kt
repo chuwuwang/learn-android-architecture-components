@@ -19,11 +19,11 @@ class SecondaryPresentationActivity : ViewBindingActivity<ActivityAdvancedPresen
         val displays = displayManager.displays
         if (displays == null || displays.size <= 1) {
             Toast.makeText(this, "The not found secondary presentation", Toast.LENGTH_SHORT).show()
+            finish()
             return
         }
         val display = displays[1]
         secondaryPresentation = SecondaryPresentation(this, display)
-
 
         binding.btnCancel.setOnClickListener { cancel() }
         binding.btnShowImage.setOnClickListener { showImage() }
