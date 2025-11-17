@@ -2,6 +2,7 @@ package com.nsz.kotlin
 
 import android.content.Intent
 import com.nsz.kotlin.advanced.coroutines.LaunchScopeActivity
+import com.nsz.kotlin.advanced.presentation.PresentationActivity
 import com.nsz.kotlin.advanced.storage.StorageActivity
 import com.nsz.kotlin.databinding.ActivityAdvancedSkillBinding
 import com.nsz.kotlin.nfc.NFCActivity
@@ -16,6 +17,7 @@ class AdvancedSkillActivity : ViewBindingActivity<ActivityAdvancedSkillBinding>(
             startActivity(intent)
         }
         binding.btnCoroutines.setOnClickListener { startActivity<LaunchScopeActivity>() }
+        binding.btnPresentation.setOnClickListener { startActivity<PresentationActivity>() }
     }
 
 }

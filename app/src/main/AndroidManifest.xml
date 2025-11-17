@@ -123,6 +123,10 @@
 
         <!-- Coroutines -->
         <activity android:name=".advanced.coroutines.LaunchScopeActivity" />
+
+        <!-- Presentation -->
+        <activity android:name=".advanced.presentation.PresentationActivity" />
+        <activity android:name=".advanced.presentation.SecondaryPresentationActivity" />
         <!--/////////////////////////////////////////////////////////////////////////////////////-->
         <!--/////////////////////////////////////////////////////////////////////////////////////-->
 

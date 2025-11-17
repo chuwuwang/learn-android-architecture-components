@@ -8,48 +8,67 @@
     android:paddingEnd="16dp">
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_nfc"
+        android:id="@+id/btn_show_image"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:letterSpacing="0.15"
-        android:text="NFC"
+        android:text="Show Image"
         android:textAppearance="?android:attr/textAppearance"
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_storage"
+        android:id="@+id/btn_single_text"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:gravity="center"
         android:letterSpacing="0.15"
-        android:text="Storage"
+        android:text="Show Single-line Text"
         android:textAppearance="?android:attr/textAppearance"
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_coroutines"
+        android:id="@+id/btn_multi_text"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:gravity="center"
         android:letterSpacing="0.15"
-        android:text="Coroutines"
+        android:text="Show Multi-line Text"
         android:textAppearance="?android:attr/textAppearance"
         android:textColor="@android:color/white"
         android:textSize="14sp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_presentation"
+        android:id="@+id/btn_interactions"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:gravity="center"
         android:letterSpacing="0.15"
-        android:text="Presentation"
+        android:text="Behavioral Interactions"
         android:textAppearance="?android:attr/textAppearance"
         android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:letterSpacing="0.15"
+        android:text="Cancel"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
         android:textSize="14sp" />
 
 </LinearLayout>
