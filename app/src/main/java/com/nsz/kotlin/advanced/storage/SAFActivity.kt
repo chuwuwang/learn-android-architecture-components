@@ -1,9 +1,9 @@
-package com.nsz.kotlin.storage
+package com.nsz.kotlin.advanced.storage
 
 import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.os.storage.StorageManager
@@ -24,7 +24,7 @@ class SAFActivity : AppCompatActivity() {
         private const val TAG = "SAFActivity"
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle ? ) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_storage_saf)
         initView()
@@ -51,7 +51,7 @@ class SAFActivity : AppCompatActivity() {
     private fun openTree() {
         val uri: Uri = Uri.parse("content://com.android.external" + "storage.documents/document/primary:Download")
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, uri)
         }
         startActivityForResult(intent, 101)
@@ -96,8 +96,8 @@ class SAFActivity : AppCompatActivity() {
     }
 
     private fun operateSDCardStorage() {
-        val storageManager = getSystemService(Context.STORAGE_SERVICE) as StorageManager
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+        val storageManager = getSystemService(STORAGE_SERVICE) as StorageManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             val storageVolumes = storageManager.storageVolumes
             for (sv in storageVolumes) {
                 Log.e(TAG, "storageVolume: $sv")
@@ -110,7 +110,7 @@ class SAFActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent ? ) {
         super.onActivityResult(requestCode, resultCode, data)
         if (data != null) {
             val uri = data.data

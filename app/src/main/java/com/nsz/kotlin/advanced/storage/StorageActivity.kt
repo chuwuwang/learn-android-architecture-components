@@ -1,4 +1,4 @@
-package com.nsz.kotlin.storage
+package com.nsz.kotlin.advanced.storage
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

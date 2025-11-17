@@ -1,7 +1,6 @@
-package com.nsz.kotlin.storage
+package com.nsz.kotlin.advanced.storage
 
 import android.Manifest
-import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -19,7 +18,7 @@ class ScopedStorageActivity : AppCompatActivity() {
         const val TAG = "ScopedStorageActivity"
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle ? ) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_storage_scope)
         initView()
@@ -36,7 +35,7 @@ class ScopedStorageActivity : AppCompatActivity() {
         val internalDataView = findViewById<TextView>(R.id.tv_internal_storage_data)
         val internalCacheView = findViewById<TextView>(R.id.tv_internal_storage_cache)
 
-        val dirFile = getDir("Joe", Context.MODE_APPEND)
+        val dirFile = getDir("Joe", MODE_APPEND)
         val bool = dirFile.exists()
         var text = if (bool) {
             " 目录已存在"
@@ -70,7 +69,7 @@ class ScopedStorageActivity : AppCompatActivity() {
         Log.d(TAG, "内部存储自定义文件: $cusFile")
 
         val data = "Hello World".toByteArray()
-        writeDataByInternalStorage(data, cusName, Context.MODE_APPEND)
+        writeDataByInternalStorage(data, cusName, MODE_APPEND)
 
         val dataStr = readDataByInternalStorage(cusName)
         Log.d(TAG, "读取内部存储自定义文件: $dataStr")
@@ -192,11 +191,13 @@ class ScopedStorageActivity : AppCompatActivity() {
             Log.d(TAG, "getExternalStorageDirectory: $text")
             dirView.text = text
 
-            val externalStoragePublicDirectoryMusic = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
+            val externalStoragePublicDirectoryMusic = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_MUSIC)
             text = "$externalStoragePublicDirectoryMusic \n"
             Log.d(TAG, "getExternalStoragePublicDirectory_DIRECTORY_MUSIC: $text")
 
-            val externalStoragePublicDirectoryDocuments = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
+            val externalStoragePublicDirectoryDocuments = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DOCUMENTS)
             text += "$externalStoragePublicDirectoryDocuments"
             Log.d(TAG, "getExternalStoragePublicDirectory_DIRECTORY_DOCUMENTS: $externalStoragePublicDirectoryDocuments")
             dirSpicView.text = text

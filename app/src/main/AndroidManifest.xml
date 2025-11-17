@@ -117,9 +117,9 @@
         </service>
 
         <!-- Scoped Storage -->
-        <activity android:name=".storage.SAFActivity" />
-        <activity android:name=".storage.StorageActivity" />
-        <activity android:name=".storage.ScopedStorageActivity" />
+        <activity android:name=".advanced.storage.SAFActivity" />
+        <activity android:name=".advanced.storage.StorageActivity" />
+        <activity android:name=".advanced.storage.ScopedStorageActivity" />
 
         <!-- Thread -->
         <activity android:name=".thread.LaunchScopeActivity" />
