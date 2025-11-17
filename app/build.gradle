@@ -26,18 +26,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-            java { srcDir 'src/main/java' }
-            proto { srcDir 'src/main/proto' } // 指定.proto文件路径
-        }
-    }
     buildFeatures {
         viewBinding true
         dataBinding true
     }
     kapt {
         generateStubs = true
+    }
+    sourceSets {
+        main {
+            java { srcDir 'src/main/java' }
+            proto { srcDir 'src/main/proto' } // 指定.proto文件路径
+        }
     }
     kotlinOptions {
         jvmTarget = '1.8'

@@ -1,72 +1,8 @@
 <resources>
 
-    <string name="app_name">Strawberry</string>
+    <string name="app_name">AAC Strawberry</string>
 
     <string name="gray">#E6E6E6</string>
     <string name="blue">#00008B</string>
-
-    <string name="nfc_hce_aid_desc">HCE Card</string>
-    <string name="nfc_hce_service_desc">HCE Service</string>
-
-    <string name="ppse">PPSE Card Payment</string>
-    <string name="pse">PSE Card Payment</string>
-    <string name="interac">Interac Payment</string>
-
-    <string name="loyalty_card">Loyalty card</string>
-    <string name="cash_card">Cash card</string>
-    <string name="visa_credit_or_debit">Visa credit or debit</string>
-    <string name="visa_electron">Visa Electron</string>
-    <string name="v_pay">V Pay</string>
-    <string name="plus">Plus</string>
-    <string name="mastercard_credit_or_debit">Mastercard credit or debit</string>
-    <string name="mastercard">Mastercard</string>
-    <string name="maestro">Maestro</string>
-    <string name="cirrus_atm_card_only">Cirrus ATM card only</string>
-    <string name="chip_authentication_program_securecode">Chip Authentication Program Securecode</string>
-    <string name="maestro_uk">Maestro UK</string>
-    <string name="american_express">American Express</string>
-    <string name="american_express_china_debit_and_credit_cards">American Express (China debit and credit cards)</string>
-    <string name="visa_branded_card">Visa-branded card</string>
-    <string name="mastercard_branded_card">Mastercard-branded card</string>
-    <string name="discover_branded_card">Discover-branded card</string>
-    <string name="store_card">Store card</string>
-    <string name="atm_card">ATM card</string>
-    <string name="cb_credit_or_debit_card">CB (credit or debit card)</string>
-    <string name="cb_debit_card_only">CB (Debit card only)</string>
-    <string name="japan_credit_bureau">Japan Credit Bureau</string>
-    <string name="dankort">Dankort</string>
-    <string name="visadankort">VisaDankort</string>
-    <string name="dankort_jspeedy">Dankort (J/speedy)</string>
-    <string name="bancomat_pagobancomat">Bancomat/PagoBancomat</string>
-    <string name="diners_club_discover">Diners Club/Discover</string>
-    <string name="banricompras_debito">Banricompras Debito</string>
-    <string name="span">SPAN</string>
-    <string name="debit_card">Debit card</string>
-    <string name="zip">ZIP</string>
-    <string name="up_debit">UnionPay Debit</string>
-    <string name="up_credit">UnionPay Credit</string>
-    <string name="upi_card">UnionPay Intl</string>
-    <string name="quasi_credit">Quasi-credit</string>
-    <string name="electronic_cash">Electronic cash</string>
-    <string name="girocard">Girocard</string>
-    <string name="pagobancomat">PagoBancomat</string>
-    <string name="verve">Verve</string>
-    <string name="rupay">RuPay</string>
-    <string name="dinube_payment_initiation_psd2">Dinube Payment Initiation (PSD2)</string>
-    <string name="mir_debit">MIR Debit</string>
-    <string name="mir_credit">MIR Credit</string>
-    <string name="ticket_restaurant">Ticket Restaurant</string>
-    <string name="savings_debit_card">Savings (debit card)</string>
-    <string name="cheque_debit_card">Cheque (debit card)</string>
-    <string name="retrait">Retrait</string>
-    <string name="standard">Standard</string>
-    <string name="classic">Classic</string>
-    <string name="prepaye_online">Prepaye Online</string>
-    <string name="prepaye_possible_offline">Prepaye Possibile Offline</string>
-    <string name="porte_monnaie_electronique">Porte Monnaie Electronique</string>
-    <string name="meeza_card">meeza Card</string>
-    <string name="mercury_card">Mercury Card</string>
-    <string name="mot_electronic_purse">MOT Electronic Purse</string>
-    <string name="mot_electronic_cash">MOT Electronic Cash</string>
 
 </resources>
